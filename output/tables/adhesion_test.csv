@@ -1,0 +1,4 @@
+Variable,Distribution,Param 1 (mu / mu_ln),Param 2 (sigma / sigma_ln),Chi2,Critical,DoF,p-value,Result
+Tempo Deslocamento,Lognormal,3.6701,0.6822,0.1058,3.8415,1,0.745,Fail to reject H0
+Media Ponderada,Normal,7.2219,1.0254,2.2267,7.8147,3,0.5267,Fail to reject H0
+Horas Semanais Grupo,Lognormal,2.7118,0.9146,1.2998,5.9915,2,0.5221,Fail to reject H0

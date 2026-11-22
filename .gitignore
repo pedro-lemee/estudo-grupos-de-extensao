@@ -9,5 +9,6 @@ wheels/
 # Virtual environments
 .venv
 
-# Data files
+# Data and report files
 data/
+figures/
