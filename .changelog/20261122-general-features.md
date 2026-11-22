@@ -6,6 +6,13 @@ Registrar as variaveis derivadas adicionadas ao notebook `notebooks/00_Data_Proc
 
 ## Features adicionadas
 
+- `grande_area_curso`: agrupa cursos de engenharia em áreas mais amplas para reduzir a fragmentação causada pela baixa amostragem em algumas categorias:
+  - `Engenharia Elétrica` e `Engenharia da Computação` -> `Elétrica & Computação`;
+  - `Engenharia Civil` e `Engenharia Ambiental` -> `Civil & Ambiental`;
+  - `Engenharia Mecatrônica`, `Engenharia Mecânica` e `Engenharia Naval` -> `Mecânica, Mecatrônica & Naval`;
+  - `Engenharia de Produção` -> `Produção`;
+  - cursos sem correspondência explícita no mapeamento -> `Outras Engenharias`.
+  Essa agregação reduz o número de categorias analisadas, mas pode ocultar diferenças entre cursos; a adequação deve ser reavaliada conforme a pergunta e a amostra de cada análise.
 - `categoria_extensao`: agrupa `grupo_extensao` em categorias mais amplas:
   - `Poli Júnior`, `Grupo de Negócios da Poli` e `Poli Consulting Club` -> `Consultoria & Negócios`;
   - `Poli Quant`, `Poli Real State` e `Poli Finance` -> `Mercado Financeiro`;
@@ -21,4 +28,4 @@ As novas colunas sao criadas em `df_clean` durante a execucao do notebook.
 
 As variaveis acima foram consideradas de carater mais geral para a base atual. Outras features que possam ser uteis devem ser estudadas caso a caso nos proximos notebooks, considerando a pergunta de pesquisa, os dados disponiveis e a interpretacao estatistica. Nao se deve presumir que essas features adicionais sejam universais ou devam ser incorporadas ao pre-processamento compartilhado.
 
-O agrupamento de grupos de extensao tambem reflete uma decisao analitica para esta pesquisa e deve ser revisto se os grupos ou o objetivo da analise mudarem.
+Os agrupamentos de cursos e de grupos de extensao refletem decisoes analiticas para esta pesquisa. Devem ser revistos se a amostra, as categorias disponiveis ou o objetivo da analise mudarem.
