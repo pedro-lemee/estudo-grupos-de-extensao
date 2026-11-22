@@ -10,8 +10,7 @@ def convert_responses(df_renamed: pd.DataFrame, exclude_non_poli: bool = False) 
     obj_cols = df.select_dtypes(include="str").columns
     df[obj_cols] = df[obj_cols].apply(lambda s: s.str.strip())
 
-    df["timestamp"] = pd.to_datetime(df["timestamp"], format="%d/%m/%Y %H:%M:%S")
-    df = df.drop(columns=["termo_consentimento"])
+    df = df.drop(columns=["termo_consentimento", "timestamp"])
 
     # Columns whose categories order does not matter
     nominal_cols = [
