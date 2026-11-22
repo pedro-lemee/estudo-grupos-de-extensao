@@ -4,6 +4,25 @@ import pandas as pd
 import seaborn as sns
 
 
+def plot_hist(df, col, order_freq=False, title=None, figsize=(10, 5), rot=35, **kwargs):
+    if order_freq:
+        # Order based on frequency count
+        ordem_auto = df[col].value_counts().index.tolist()
+        df[col] = pd.Categorical(df[col], categories=ordem_auto, ordered=True)
+
+    fig, ax = plt.subplots(figsize=figsize)
+    sns.histplot(data=df, x=col, color="#1f4e78", shrink=0.8, alpha=1, ax=ax, **kwargs)
+
+    ax.bar_label(ax.containers[0], padding=3)
+    ax.set_ylim(0, ax.get_ylim()[1] * 1.12)
+    ax.set(title=title or f"Distribution of {col}", xlabel="", ylabel="Count")
+
+    sns.despine(ax=ax)
+    plt.xticks(rotation=rot, ha="right" if rot else "center")
+    plt.tight_layout()
+    plt.show()
+
+
 def plot_histograms(df: pd.DataFrame, titles):
     fig, axes = plt.subplots(1, len(titles), figsize=(18, 4.5), constrained_layout=True)
 
