@@ -1,0 +1,5 @@
+Variável,n,Média,DP,Mediana,Q1,Q3,Mín,Máx,% nota ≥ 4,% nota 5,% delta > 0
+Preparo na extensão,187,4.59,0.58,5.0,4.0,5.0,3,5,95.19,63.64,
+Preparo nas disciplinas,187,2.32,0.95,2.0,2.0,3.0,1,4,12.83,0.0,
+Ganho líquido (extensão − disciplinas),187,2.27,1.17,2.0,1.5,3.0,-1,4,,,93.05
+Importância da média,187,2.93,1.05,3.0,2.0,4.0,1,5,29.41,5.35,
